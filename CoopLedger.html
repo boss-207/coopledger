@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CoopLedger.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
+      }
+    }
+  }
+  function toggleMenu(){
+    const menu =document.getElementById('menu-mobile');
+    menu.classList.toggle('hidden');
+
+  }
+</script>
+    <title>Document</title>
+    
+</head>
+<body>
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur shadow-sm px-6 py-4 flex items-center justify-between">
+        <div class="text-2xl font-bold">Coop<span class="text-green-700">Ledger</span></div>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#Coopérative" class="text-gray-500 font-medium text-lg hover:text-green-700 transition">Coopérative</a>
+            <a href="#Problème" class="text-gray-500 font-medium text-lg hover:text-green-700 transition">Problème</a>
+            <a href="#Solution" class="text-gray-500 font-medium text-lg hover:text-green-700 transition">Solution</a>
+        </div>
+        <a href="#Solution" class="hidden md:block border border-green-700 text-green-700 hover:bg-green-700 hover:text-white py-2 px-4 rounded-full transition">Découvrir</a>
+        <button id="menu" class="md:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+            <span class="w-6 h-0.5 bg-gray-800"></span>
+            <span class="w-6 h-0.5 bg-gray-800"></span>
+            <span class="w-6 h-0.5 bg-gray-800"></span>
+        </button>
+    </nav>
+    <div id="menu-mobile" class="hidden flex flex-col gap-4 fixed top-16 left-0 w-full bg-white z-50 shadow-lg p-6 px-6 py-6 md:hidden">
+        <a href="#Coopérative" class="text-gray-500 font-medium text-lg hover:text-green-700 transition" onclick="toggleMenu()">Coopérative</a>
+        <a href="#Problème" class="text-gray-500 font-medium text-lg hover:text-green-700 transition" onclick="toggleMenu()">Problème</a>
+        <a href="#Solution" class="text-gray-500 font-medium text-lg hover:text-green-700 transition" onclick="toggleMenu()">Solution</a>
+        <a href="#Solution" class="text-gray-500 font-medium text-lg hover:text-green-700 transition font-bold" onclick="toggleMenu()">Découvrir</a>
+    </div>
+    <section id="hero" class="flex h-screen items-center justify-center text-center" style="background: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&q=80') center/cover no-repeat;">
+        <div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none mb-6 tracking-tight">Coop<span class="text-green-700">Ledger</span></h1>
+            <p class="text-base md:text-xl  text-white landing-relaxed mb-10 px-4">La blockchain au service de la transparence des coopératives<br/>agricoles togolaises</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+                <a href="#Problème" class="bg-white text-green-900 px-8 py-4 rounded-full text-base font-bold hover:bg-red-500 hover:text-white text-center">Voir les problèmes</a>
+                <a href="#Solution" class="border border-white text-white px-8 py-4 rounded-full text-base font-bold hover:bg-green-700 hover:text-white hover:border-green-700 text-center transition">Notre Solution</a>
+            </div>
+        </div>
+        <div class="">
+            <a href="#Coopérative" class="absolute bottom-0 text-white animate-bounce left-1/2 transform -translate-x-1/2">↓</a>
+        </div>
+    </section>
+    <section id="Coopérative" class="py-24 px-12 bg-[#f5f7f0] mb-5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold leading-tight mb-6">Notre coopérative cible :<br/><span class="text-green-700">le CTA de Broukou</span></h2>
+                <p class="text-gray-600 text-lg leading-relaxed max-w-xl">Le Centre de Transformation Agricole (CTA) de Broukou est situé dans le canton de Léon, préfecture de Doufelgou 3, région de la Kara. Cette coopérative regroupe <strong class="text-gray-900">45 agriculteurs</strong>  qui mutualisent leurs cotisations pour acheter des engrais et des semences en groupe. Comme plus de <strong class="text-gray-900">60% des coopératives togolaises</strong> , sa comptabilité est tenue uniquement sur papier.</p>
+            </div>
+            <div class=" flex flex-col gap-4 ">
+                <div class="bg-white rounded-2xl gap-8 shadow-sm items-center flex px-6 py-5 mb-5 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                        👥
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-1 text-green-700">45</h2>
+                        <p class="text-gray-500 font-bold text-xl">agriculteurs membres</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl gap-8 shadow-sm items-center flex px-6 py-5 mb-5 hover:shadow-lg transition-shadow duration-300">
+                    <div class=" w-16 h-16 flex-shrink-0 bg-gray-100 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">📋</div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-1 text-green-700">100%</h2>
+                        <p class="text-gray-500 font-bold text-xl">comptabilité papier</p>
+                    </div>
+                </div>
+                <div class="bg-white flex flex-shrink-0 rounded-2xl gap-8 shadow-sm items-center px-6 py-5 hover:shadow-lg transition-shadow duration-300 mb-5" >
+                    <div class=" w-16 h-16 flex-shrink-0 bg-gray-100 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">📈</div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-1 text-green-700">60%+</h2>
+                        <p class="text-gray-500 font-bold text-xl">des coopératives togolaises sans outil numérique</p>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden h-56 group">
+                    <img src="https://scalingupnutrition.org/sites/default/files/2022-07/Benin-and-IFAD.jpg" alt="Agriculteurs CTA de Broukou" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30 flex items-end">
+                        <p class="text-white text-sm font-semibold p-4 ">Agriculteurs du CTA de Broukou, Région de la Kara</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section id="Problème" class="py-12 px-12">
+        <div class=" w-full px-6 mx-auto text-center mb-14">
+        <div class="justify-center items-center">
+            <h2 class="text-4xl font-bold landing-tight mb-5">Un détournement de <span class="text-red-500">4 millions FCFA</span></h2>
+            <p class="text-lg text-gray-600 landing-relaxed mb-14">En mars 2025, la presse togolaise a révélé qu'un conseiller municipal avait détourné plus de 4 millions FCFA des cotisations des agriculteurs pour l'achat d'engrais. Les membres n'avaient aucun moyen de contrôler où allait leur argent.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-14">
+            <div class="bg-red-100 border border-red-200 rounded-2xl p-7 hover:shadow-lg transition-shadow duration-300 hover:bg-red-200 ">
+                <div class="bg-red-50 rounded-2xl w-16 h-16 items-center justify-center flex text-2xl font-bold flex-shrink-0 mb-5">📖</div>
+                <div>
+                    <h2 class="text-xl font-bold">Aucun registre transparent</h2>
+                    <h3 class="text-sm font-semibold text-red-500 mb-5">Comptabilité papier</h3>
+                    <p class="landing-relaxed text-gray-600">Les livres de comptes peuvent être falsifiés, perdus ou simplement cachés aux membres.</p>
+                </div>
+            </div>
+            <div class="bg-red-100 border border-red-200 rounded-2xl p-7 hover:shadow-lg transition-shadow duration-300 hover:bg-red-200 ">
+                <div class="bg-red-50 rounded-2xl w-16 h-16 items-center justify-center flex flex-shrink-0 font-bold text-2xl mb-5">👤</div>
+                <div>
+                    <h2 class="font-bold text-xl">Gestion centralisée</h2>
+                    <h3 class="text-red-500 text-sm font-semibold mb-5">Une seule personne contrôle tout</h3>
+                    <p class="landing-relaxed text-gray-600">Le trésorier ou le président dispose d'un pouvoir total et sans contre-pouvoir sur les fonds.</p>
+                </div>
+            </div>
+            <div class="bg-red-100 border border-red-200 rounded-2xl p-7 hover:shadow-lg transition-shadow duration-300 hover:bg-red-200 ">
+                <div class="bg-red-50 rounded-2xl w-16 h-16 items-center justify-center flex flex-shrink-0 font-bold text-2xl mb-5">🚫</div>
+                <div>
+                    <h2 class="font-bold text-xl">Absence de contrôle</h2>
+                    <h3 class="text-red-500 text-sm font-semibold mb-5">Les membres ne peuvent rien vérifier</h3>
+                    <p class="landing-relaxed text-gray-600">Impossible de consulter les mouvements de fonds, de demander des comptes ou de lever une alerte.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-green-900 rounded-2xl px-8 py-10 mb-5 hover:shadow-lg transition-shadow duration-300">
+            <p class="text-green-400 text-xs font-bold tracking-widest uppercase mb-3">
+                Chiffre clé
+            </p>
+            <h2 class="text-xl md:text-2xl font-extrabold text-white leading-snug mb-3">
+                <span class="text-green-400">70% des membres</span> des coopératives togolaises ne font pas confiance à leur direction.
+            </h2>
+
+        </div>
+        </div>
+    </section>
+    <section id="Solution" class="py-24 px-12 bg-[#f5f7f0] mb-5">
+        <div  class ="w-full px-6 mx-auto text-center mb-14">
+            <h2 class="text-4xl text-center font-bold justify-center mb-5"><span class="text-green-700">CoopLedger </span>: La transparence par la blockchain</h2>
+            <p class="text-xl text-gray-500 items-center justify-center mb-14">CoopLedger est une application web et mobile qui enregistre chaque transaction sur blockchain. Résultat : transactions inaltérables, visibilité totale, votes démocratiques.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-14">
+                <div class="bg-green-200 rounded-2xl hover:shadow-lg transition-shadow duration-300 p-7 hover:bg-green-300 ">
+                    <div class="bg-white rounded-2xl text-2xl w-16 h-16 justify-center items-center flex flex-shrink-0 font-bold mb-5">✅</div>
+                    <div class="font-bold text-xl mb-3">Transactions immuables</div>
+                    <p class="landing-relaxed text-gray-600 items-center justify-center">Chaque transaction est enregistrée sur la blockchain de manière définitive. Ni le trésorier, ni le président, ni personne ne peut l'effacer.</p>
+                </div> 
+                <div class="bg-blue-200 rounded-2xl hover:shadow-lg transition-shadow duration-300 p-7 hover:bg-blue-300">
+                    <div class="bg-white rounded-2xl text-2xl w-16 h-16 justify-center items-center flex flex-shrink-0 font-bold mb-5">👁️</div>
+                    <div class="font-bold text-xl mb-3">Visibilité totale</div>
+                    <p class="landing-relaxed text-gray-600 items-center justify-center">Via l'application mobile ou web, chaque membre peut consulter le solde, les entrées et les sorties de la coopérative à tout moment.</p>
+                </div>
+                <div class="bg-yellow-100 rounded-2xl hover:shadow-lg transition-shadow duration-300 p-7 hover:bg-yellow-200">
+                    <div class="bg-white rounded-2xl text-2xl w-16 h-16 justify-center items-center flex flex-shrink-0 font-bold mb-5">🗳️</div>
+                    <div class="font-bold text-xl mb-3">Votes démocratiques</div>
+                    <p class="landing-relaxed text-gray-600 items-center justify-center">Toute dépense dépassant un seuil défini déclenche automatiquement un vote. La majorité des membres doit approuver avant que les fonds ne soient débloqués.</p>
+                </div>
+            </div>
+                <div class="bg-green-900 rounded-2xl px-6 py-5 gap-8 mb-5  hover:shadow-lg transition-shadow duration-300">
+                    
+                    <div class="w-16 h-16 bg-green-200 rounded-2xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0 mb-5">
+                        🔒
+                    </div>
+                    <div class="">
+                        <p class="text-white font-bold text-xl"><span class="text-green-500">La blockchain</span> garantit que personne, pas même le trésorier ou le président, ne peut modifier ou effacer une transaction. L'historique est permanent, public et vérifiable par tous.</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="py-24 px-12 mb-5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold leading-tight mb-6">Comment <span class="text-green-700">CoopLedger</span> aurait empêché le détournement de Broukou</h2>
+                <p class="text-gray-600 text-lg leading-relaxed max-w-xl">Voici comment CoopLedger aurait géré les 4      millions FCFA détournés, grâce aux smart contracts et au vote démocratique des membres.</p>
+            </div>
+            <div class=" flex flex-col gap-6">
+                <div class="bg-green-50 rounded-2xl p-6 flex gap-5 items-start hover:shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-green-700 rounded-xl flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                        1
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold mb-1">Les 4 millions FCFA auraient été bloqués par le smart contract</h2>
+                        <p class="text-gray-600 text-sm leading-relaxed">Dès la réception des cotisations, les fonds sont verrouillés dans un contrat intelligent sur la blockchain.</p>
+                    </div>
+                </div>
+                <div class="bg-green-50 rounded-2xl p-6 flex gap-5 items-start hover:shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-green-700 rounded-xl flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                        2
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold mb-1">Un vote automatique aurait été déclenché auprès des 45 membres</h2>
+                        <p class="text-gray-600 text-sm leading-relaxed">Chaque membre reçoit une notification sur son mobile pour approuver ou refuser la dépense.</p>
+                    </div>
+                </div>
+                <div class="bg-green-50 rounded-2xl p-6 flex gap-5 items-start hover:shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-green-700 rounded-xl flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                        3
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold mb-1">Sans majorité, la transaction aurait été refusée</h2>
+                        <p class="text-gray-600 text-sm leading-relaxed">Si la majorité n'est pas atteinte, le smart contract refuse automatiquement le transfert et les fonds restent bloqués.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Aperçu" class="py-24 px-6 bg-[#f5f7f0]">
+
+        <div class="max-w-7xl mx-auto text-center">
+
+            <h2 class="text-4xl font-bold mb-6">
+                Aperçu de l'application
+            </h2>
+
+            <p class="text-gray-600 text-lg max-w-xl mx-auto mb-14">
+                Voici à quoi ressemble CoopLedger en action, avec les écrans de consultation des transactions, de vote et de gestion des membres.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+
+               
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 hover:bg-white">
+                    <div class="m-4 h-56 rounded-xl overflow-hidden">
+                        <img src="img/dash.jpeg" class="w-full h-full object-cover hover:scale-105 transition duration-500 ">
+                    </div>
+                    <div class="px-6 pb-7 text-left">
+                        <p class="text-xs font-bold text-gray-400 uppercase mb-2">
+                            Solde et graphiques
+                        </p>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">
+                            Tableau de bord
+                        </h3>
+                        <p class="text-sm text-gray-500">
+                            Vue globale du solde de la coopérative, graphiques et alertes en temps réel.
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="m-4 h-56 rounded-xl overflow-hidden">
+                        <img src="img/vote.jpeg" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="px-6 pb-7 text-left">
+                        <p class="text-xs font-bold text-gray-400 uppercase mb-2">
+                            Les membres décident
+                        </p>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">
+                            Écran de vote
+                        </h3>
+                        <p class="text-sm text-gray-500">
+                            Interface de vote simple pour approuver ou rejeter une dépense.
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="m-4 h-56 rounded-xl overflow-hidden">
+                        <img src="img/histo.jpeg" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="px-6 pb-7 text-left">
+                        <p class="text-xs font-bold text-gray-400 uppercase mb-2">
+                            Toutes les transactions tracées
+                        </p>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">
+                            Historique
+                        </h3>
+                        <p class="text-sm text-gray-500">
+                            Journal immuable de chaque transaction consultable par tous.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="py-12 px-6 text-center text-white text-sm bg-green-900">
+        &copy; 2026 CoopLedger. Tous droits réservés.
+    </footer>
+
+</body>
+</html>
